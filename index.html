@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Trig Identity Learning</title>
+  <meta name="description" content="Simple tool for learning the main Trig identities.">
+  <meta name="author" content="Draylar">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/barebones.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Initial JavaScript
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        tags: 'ams'
+      }
+    };
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon-16.png">
+
+</head>
+
+<body>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <!-- <p>When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+      $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</p>
+       -->
+    <div>
+      <!-- Title -->
+      <h4>Trig Identity Learning</h4>
+      <p>Ready to learn the Trig Identities? Let us begin! Use the <a
+          href="https://tutorial.math.lamar.edu/pdf/Trig_Cheat_Sheet.pdf">Trig Cheat Sheet</a> if you need to review
+        first.</p>
+      <hr>
+
+      <!-- Question Content-->
+      <div id="question">
+
+        <!-- Current Question Prompt-->
+        <p id="current-question"></p>
+
+        <!-- Grid for Answer Boxes -->
+        <div id="answers"></div>
+
+        <!-- Progress Bar -->
+        <progress id="progress" max="10" value="0"></progress>
+      </div>
+    </div>
+
+    <!-- Category & Assumptions-->
+    <div class="category">
+      <p id="question-category"></p>
+      <p id="question-hint"></p>
+      <button id="skip">Skip Category</button>
+    </div>
+  </div>
+
+
+
+  <!-- Late JavaScript
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="scripts/main.js"></script>
+
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>

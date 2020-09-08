@@ -1,0 +1,127 @@
+.container {
+    width: 50%;
+    padding-top: 50px;
+    margin: auto;
+}
+
+@media (min-width: 1000px) {
+    .container {
+        width: 35%;
+        padding-top: 50px;
+        margin: auto;
+    }
+}
+
+#question-category {
+    margin-bottom: 0px;
+}
+
+#question-hint {
+    margin-bottom: 0px;
+}
+
+label {
+    margin-left: 0px;
+}
+
+/* div for holding answers */
+#answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    width: 100%;
+}
+
+@media only screen and (max-width: 750px) {
+    #answers {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+/* a box that houses an answer */
+.answer {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, .2);
+    margin: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: .35s;
+    z-index: 10;
+    cursor: pointer;
+    background-color: white;
+    min-width: 0;
+}
+
+.answer:hover {
+    box-shadow: 0px 2px 10px rgba(0, 92, 145, 0.5);
+    transition: .35s;
+}
+
+/* progress bar */
+#progress {
+    width: 100%;
+}
+
+/* Remove MathJax click consumption so the underlying button is activated when clicked. */
+.MathJax {
+    pointer-events: none;
+}
+
+/* Remove MathJax click-to-focus functionality due to it ruining buttons. */
+.MathJax:focus {
+    outline:0 !important;
+}
+
+#question {
+    text-align: center;
+}
+
+#answer-form {
+    margin: auto;
+}
+
+.incorrect {
+    animation: shake 0.5s;
+    animation-iteration-count: 1;
+    transition: 1s;
+    background-color: red;
+}
+
+.correct {
+    animation: bob 0.5s;
+    animation-iteration-count: 1;
+    transition: 1s;
+    background-color: greenyellow;
+}
+
+.category {
+    padding-top: 3vh;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#skip {
+    margin-top: 15px;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes bob {
+    0% { transform: translate(0px, -3px); }
+    100% { transform: translate(0px, 0px); }
+}
